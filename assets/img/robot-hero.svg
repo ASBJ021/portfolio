@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Robotics illustration">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="22" fill="#0b1220"/>
+  <g fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round">
+    <path d="M120 360h400" opacity="0.4"/>
+    <circle cx="320" cy="240" r="120"/>
+    <circle cx="280" cy="220" r="20"/>
+    <circle cx="360" cy="220" r="20"/>
+    <path d="M260 300c40 30 80 30 120 0"/>
+    <path d="M180 180l-40-40m360 0l-40 40" opacity="0.7"/>
+  </g>
+  <g fill="url(#g)">
+    <rect x="200" y="340" width="240" height="20" rx="10"/>
+    <circle cx="280" cy="220" r="6"/>
+    <circle cx="360" cy="220" r="6"/>
+  </g>
+</svg>
+

@@ -1,0 +1,188 @@
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="filters" role="tablist" aria-label="Project categories">
+            <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all"><span class="label">All</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="ml"><span class="label">ML</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="cv"><span class="label">CV</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="robotics"><span class="label">Robotics</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="llm"><span class="label">LLM</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="multimodal"><span class="label">Multimodal</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal"><span class="label">Personal</span><span class="filter-count" aria-hidden="true"></span></button>
+            <span class="filters-status" aria-live="polite"></span>
+          </div>
+
+          <h3>Machine Learning</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="ml">
+              <img src="assets/img/project-perception.svg" alt="Object Detection Models" class="card-media" />
+              <div class="card-body">
+                <h3>Object Detection Models</h3>
+                <p>Implemented Faster‑RCNN, Mask‑RCNN, and DETR for visual recognition tasks; evaluated performance and trade‑offs across datasets.</p>
+                <div class="tags"><span>PyTorch</span><span>OpenCV</span><span>Detection</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                  <a href="#" class="btn small ghost">Results</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="ml">
+              <img src="assets/img/project-slam.svg" alt="Autonomous Driving" class="card-media" />
+              <div class="card-body">
+                <h3>Autonomous Driving (E2E)</h3>
+                <p>Trained end‑to‑end self‑driving models on collected sensor and image data in the Udacity simulator.</p>
+                <div class="tags"><span>PyTorch</span><span>Udacity</span><span>Simulation</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                  <a href="#" class="btn small ghost">Demo</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="ml">
+              <img src="assets/img/project-perception.svg" alt="Hyperparameter Optimization" class="card-media" />
+              <div class="card-body">
+                <h3>Generative HPO</h3>
+                <p>Explored generative models for hyperparameter optimization to improve training efficiency and model performance.</p>
+                <div class="tags"><span>Diffusion</span><span>PyTorch</span><span>HPO</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Write‑up</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3>Computer Vision</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="cv">
+              <img src="assets/img/project-perception.svg" alt="CAPTCHA Solver" class="card-media" />
+              <div class="card-body">
+                <h3>CAPTCHA Solver</h3>
+                <p>End‑to‑end system recognizing degraded alphanumeric CAPTCHAs with CNNs and Transformer encoder + parallel slot decoder.</p>
+                <div class="tags"><span>PyTorch</span><span>Transformer</span><span>ResNet</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                  <a href="#" class="btn small ghost">Demo</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="cv">
+              <img src="assets/img/project-perception.svg" alt="Pickleball Tracking" class="card-media" />
+              <div class="card-body">
+                <h3>Pickleball Tracking</h3>
+                <p>Computer vision pipeline for ball and player tracking using object detection and trajectory analysis.</p>
+                <div class="tags"><span>Detection</span><span>Tracking</span><span>OpenCV</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="cv">
+              <img src="assets/img/project-perception.svg" alt="Eye‑Gaze Cursor" class="card-media" />
+              <div class="card-body">
+                <h3>Eye‑Gaze Cursor Control</h3>
+                <p>Assistive HCI tool mapping gaze to cursor control with robust calibration and filtering.</p>
+                <div class="tags"><span>HCI</span><span>OpenCV</span><span>Python</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3>Robotics</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="robotics">
+              <img src="assets/img/project-arm.svg" alt="Jenga with Franka" class="card-media" />
+              <div class="card-body">
+                <h3>Playing Jenga with Franka</h3>
+                <p>Programmed the FR3 to manipulate a Jenga tower; Gym wrapper and MuJoCo sim pipeline for data collection.</p>
+                <div class="tags"><span>MuJoCo</span><span>Gym</span><span>FR3</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                  <a href="#" class="btn small ghost">Results</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="robotics">
+              <img src="assets/img/project-slam.svg" alt="Pick‑and‑Place Simulation" class="card-media" />
+              <div class="card-body">
+                <h3>Pick‑and‑Place Simulation</h3>
+                <p>Robot simulation for pick‑and‑place using PyBullet and OpenAI Gym; designed reward shaping and task curriculum.</p>
+                <div class="tags"><span>PyBullet</span><span>Gym</span><span>RL</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="robotics">
+              <img src="assets/img/project-slam.svg" alt="Stop Sign + CO2 Monitoring" class="card-media" />
+              <div class="card-body">
+                <h3>Stop Sign + CO2 (ROS/IoT)</h3>
+                <p>Built stop‑sign detection integrated with CO2 monitoring; deployed on embedded hardware with ROS.</p>
+                <div class="tags"><span>ROS</span><span>IoT</span><span>CV</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3>Large Language Models</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="llm">
+              <img src="assets/img/project-perception.svg" alt="UTN FAQ Chatbot" class="card-media" />
+              <div class="card-body">
+                <h3>UTN FAQ Chatbot</h3>
+                <p>Fine‑tuned an LLM with LoRA/PEFT to answer student FAQs; evaluated responses and compiled technical report.</p>
+                <div class="tags"><span>LoRA</span><span>PEFT</span><span>Transformers</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                  <a href="#" class="btn small ghost">Report</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3>Multimodal Foundation Models</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="multimodal">
+              <img src="assets/img/project-perception.svg" alt="Optimized Tarsier" class="card-media" />
+              <div class="card-body">
+                <h3>Optimized Tarsier</h3>
+                <p>Applied INT8/INT4 post‑training quantization to reduce inference latency and memory footprint.</p>
+                <div class="tags"><span>Quantization</span><span>BitsAndBytes</span><span>Transformers</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal" data-category="multimodal">
+              <img src="assets/img/project-perception.svg" alt="Dash Grid Agent" class="card-media" />
+              <div class="card-body">
+                <h3>Dash Grid Agent</h3>
+                <p>LLM agent solving grid‑world environments on BabyAI using prompt engineering strategies.</p>
+                <div class="tags"><span>BabyAI</span><span>Qwen2.5</span><span>Agents</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <h3>Personal</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="personal">
+              <img src="assets/img/project-perception.svg" alt="Video Background Remover" class="card-media" />
+              <div class="card-body">
+                <h3>Video Background Remover</h3>
+                <p>Tool using SAM2 to segment subjects and remove backgrounds in videos; hosted via API with asynchronous jobs.</p>
+                <div class="tags"><span>SAM2</span><span>OpenCV</span><span>RunPod</span></div>
+                <div class="card-actions">
+                  <a href="#" class="btn small">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
