@@ -45,11 +45,12 @@ This concatenates the section files in order into the root `index.html`.
 This repo includes a workflow that builds from partials and deploys automatically.
 
 1. Create a new GitHub repository and push this project (set default branch to `main`).
-2. Ensure Actions are enabled for the repo.
-3. On the first push to `main`, the workflow `.github/workflows/deploy.yml` runs:
+2. Enable GitHub Pages for the repo: Settings → Pages → Build and deployment → Source = "GitHub Actions".
+3. Ensure Actions are enabled for the repo.
+4. On the next push to `main`, the workflow `.github/workflows/deploy.yml` runs:
    - Builds `index.html` from `src/` partials
    - Publishes the site to GitHub Pages
-4. In GitHub: Settings → Pages → Check the deployed URL (it appears after the first run).
+5. In GitHub: Settings → Pages → Check the deployed URL (it appears after the first run).
 
 Notes
 - Site URL: `https://<username>.github.io/<repo>` (or `https://<username>.github.io` if the repo is named `<username>.github.io`).
