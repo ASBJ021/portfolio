@@ -29,11 +29,15 @@ jobs:
       - name: Build index.html from partials
         run: |
           python3 scripts/build.py
+          mkdir -p dist
+          cp index.html dist/
+          cp -r assets dist/
+          if [ -f .nojekyll ]; then cp .nojekyll dist/; fi
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
   deploy:
     needs: build
@@ -45,4 +49,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
