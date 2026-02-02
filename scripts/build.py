@@ -12,7 +12,7 @@ parts = [
     root / 'src/sections/projects.html',
     root / 'src/sections/education.html',
     root / 'src/sections/experience.html',
-    # root / 'src/sections/publications.html',
+    root / 'src/sections/publications.html',
     root / 'src/sections/contact.html',
     root / 'src/layout/end.html',
 ]
@@ -28,4 +28,3 @@ def concat(files):
 html = concat(parts)
 out.write_text(html)
 print(f'Wrote {out} ({len(html)} bytes)')
-
