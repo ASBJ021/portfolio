@@ -1,72 +1,82 @@
 # AI & Robotics Portfolio
 
-A fast, responsive, and accessible portfolio site tailored for an AI & Robotics Engineer. Built with plain HTML/CSS/JS (no external dependencies), including dark mode, project cards, publications, and contact links.
+Static portfolio for Akashkumar Jain, focused on AI & Robotics, Physical AI, Sim2Real systems, computer vision, foundation models, and deployable ML/robotics work.
+
+The site is built with plain HTML, CSS, and JavaScript. There are no external frontend dependencies.
+
+## Current Content
+
+- Hero positioning for AI & Robotics, Physical AI, ROS, Isaac/MuJoCo simulation, VLA, LLM/VLM, ML, and computer vision.
+- About section with interested areas, profile photo, contact details, and focus points.
+- Skills grouped by programming, ML/AI, CV/multimodal, robotics/simulation, experimentation, and tools.
+- Projects with filterable categories: ML, CV, Robotics, LLM / Multimodal, and Personal.
+- Master's thesis card: `Improving Vision Transformer Efficiency Using Genetic Patch Pruning`.
+- Education, experience, resume link, social links, and contact cards.
 
 ## Structure
 
-- `index.html` — Main page markup
-- `src/layout/*` — Head/foot wrappers (`start.html`, `end.html`)
-- `src/sections/*` — Section partials (home, about, skills, projects, education, experience, publications, contact)
-- `assets/css/styles.css` — Theme, layout, and components
-- `assets/js/main.js` — Dark mode, mobile nav, reveal animations
-- `assets/img/*` — Local SVG artwork and favicon
-- `assets/resume/` — Put your resume PDF here
- - `scripts/build.py` — Concatenates partials into `index.html`
+- `index.html` - Generated site entry point.
+- `src/layout/start.html` - Document head, metadata, header, navigation.
+- `src/layout/end.html` - Footer and script entry.
+- `src/sections/*.html` - Source partials for page sections.
+- `assets/css/styles.css` - Theme, layout, responsive styles, cards, filters.
+- `assets/js/app.js` - JavaScript entry point.
+- `assets/js/modules/` - Theme, navigation, reveal effects, project filters.
+- `assets/img/profile_pic.jpeg` - Profile photo used in the About card.
+- `assets/img/*.svg` - Logo, favicon, hero, and project illustrations.
+- `assets/resume/CV__Akashkumar_Jain.pdf` - Resume linked from the header and hero.
+- `scripts/build.py` - Concatenates source partials into `index.html`.
 
-## Quick Start
+## Local Preview
 
-1. Open `index.html` in a browser.
-2. Replace placeholder links and text (GitHub, LinkedIn, email, location, company names).
-3. Drop your resume at `assets/resume/Akash_Bhansali_Resume.pdf` or update the Resume link in the header.
+Because the JavaScript uses ES modules, preview through a local server:
 
-## Build from Partials
+```sh
+python3 -m http.server 8080
+```
 
-- Edit files in `src/layout/` and `src/sections/`.
-- Rebuild `index.html` by running:
+Then open:
 
-  `python3 scripts/build.py`
+```text
+http://127.0.0.1:8080/
+```
 
-This concatenates the section files in order into the root `index.html`.
+## Editing Workflow
 
-## Customize
+Edit the source files in `src/layout/` and `src/sections/`, then rebuild:
 
-- Name, title, and description: edit `<title>`, meta description, and hero section in `index.html`.
-- Social links: update GitHub/LinkedIn/email in `index.html`.
-- Projects: add/remove `<article class="card">` blocks in `#projects` with your details.
-- Experience: edit the timeline items in `#experience`.
-- Publications: update the list in `#publications`.
-- Colors: tweak CSS variables in `assets/css/styles.css`.
-- Dark mode: toggled via the moon/sun button; persists in `localStorage`.
+```sh
+python3 scripts/build.py
+```
 
-## Deploy
+Do not edit `index.html` directly for lasting content changes; it is generated from the partials.
 
-### GitHub Pages (with Actions)
+## Common Updates
 
-This repo includes a workflow that builds from partials and deploys automatically.
+- Hero copy: `src/sections/home.html`
+- About text and interested areas: `src/sections/about.html`
+- Skills: `src/sections/skills.html`
+- Projects and project filters: `src/sections/projects.html`
+- Education and thesis mention: `src/sections/education.html`
+- Experience: `src/sections/experience.html`
+- Contact links: `src/sections/contact.html`
+- SEO metadata and social preview text: `src/layout/start.html`
+- Styling and responsive layout: `assets/css/styles.css`
 
-1. Create a new GitHub repository and push this project (set default branch to `main`).
-2. Enable GitHub Pages for the repo: Settings → Pages → Build and deployment → Source = "GitHub Actions".
-3. Ensure Actions are enabled for the repo.
-4. On the next push to `main`, the workflow `.github/workflows/deploy.yml` runs:
-   - Builds `index.html` from `src/` partials
-   - Publishes the site to GitHub Pages
-5. In GitHub: Settings → Pages → Check the deployed URL (it appears after the first run).
+## Deployment
 
-Notes
-- Site URL: `https://<username>.github.io/<repo>` (or `https://<username>.github.io` if the repo is named `<username>.github.io`).
-- Edit partials in `src/` and push; the workflow rebuilds and redeploys automatically.
-- A `.nojekyll` file is included to prevent Jekyll processing.
+This is a static site and can be hosted on GitHub Pages, Netlify, Vercel, S3, Firebase Hosting, or any static host.
 
-### Other static hosts
+Before deploying, rebuild `index.html`:
 
-Any static host (Netlify, Vercel, S3, Firebase Hosting) works. If you use CI, run `python3 scripts/build.py` before uploading.
+```sh
+python3 scripts/build.py
+```
+
+This repository includes a GitHub Pages workflow in `.github/workflows/deploy.yml` that builds from the partials and publishes the generated site.
 
 ## Notes
 
-- The site avoids external fonts or libraries to keep it fast and offline‑friendly.
-- Images are simple SVG placeholders — replace with real screenshots/photos as desired.
-- For SEO, update the JSON‑LD `@type: Person` block in `index.html` with your actual profile URLs.
-
-## License
-
-You own the content you place in this portfolio. Use, modify, and deploy freely.
+- Keep project links real; avoid placeholder `href="#"` actions.
+- Keep content changes in `src/` partials so the build remains reproducible.
+- The site uses local assets and system fonts for fast loading.
