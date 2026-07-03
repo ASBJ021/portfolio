@@ -6,10 +6,22 @@
             <button class="filter-btn" role="tab" aria-selected="false" data-filter="ml"><span class="label">ML</span><span class="filter-count" aria-hidden="true"></span></button>
             <button class="filter-btn" role="tab" aria-selected="false" data-filter="cv"><span class="label">CV</span><span class="filter-count" aria-hidden="true"></span></button>
             <button class="filter-btn" role="tab" aria-selected="false" data-filter="robotics"><span class="label">Robotics</span><span class="filter-count" aria-hidden="true"></span></button>
-            <button class="filter-btn" role="tab" aria-selected="false" data-filter="llm"><span class="label">LLM</span><span class="filter-count" aria-hidden="true"></span></button>
-            <button class="filter-btn" role="tab" aria-selected="false" data-filter="multimodal"><span class="label">Multimodal</span><span class="filter-count" aria-hidden="true"></span></button>
+            <button class="filter-btn" role="tab" aria-selected="false" data-filter="foundation"><span class="label">LLM / Multimodal</span><span class="filter-count" aria-hidden="true"></span></button>
             <button class="filter-btn" role="tab" aria-selected="false" data-filter="personal"><span class="label">Personal</span><span class="filter-count" aria-hidden="true"></span></button>
             <span class="filters-status" aria-live="polite"></span>
+          </div>
+
+          <h3>Master's Thesis</h3>
+          <div class="grid three cards">
+            <article class="card reveal" data-category="foundation">
+              <img src="assets/img/project-perception.svg" alt="Vision Transformer patch pruning thesis" class="card-media" />
+              <div class="card-body">
+                <h3>Genetic Patch Pruning for Vision Transformers</h3>
+                <p>Improving Vision Transformer efficiency using a dynamic patch selection framework that finds informative patch subsets and integrates with CLIP.</p>
+                <div class="tags"><span>PyTorch</span><span>CLIP</span><span>Genetic Algorithms</span><span>ViT</span><span>VLM</span></div>
+                <p class="project-signal"><strong>Focus:</strong> adaptive token pruning, patch selector training, and efficient vision-language inference.</p>
+              </div>
+            </article>
           </div>
 
           <h3>Machine Learning</h3>
@@ -20,10 +32,7 @@
                 <h3>Object Detection Models</h3>
                 <p>Implemented Faster‑RCNN, Mask‑RCNN, and DETR with a PyTorch/OpenCV stack, benchmarking trade‑offs across manufacturing and sports datasets.</p>
                 <div class="tags"><span>PyTorch</span><span>OpenCV</span><span>Detection</span><span>Hydra</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                  <a href="#" class="btn small ghost">Results</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> model implementation, evaluation discipline, and production-oriented CV tooling.</p>
               </div>
             </article>
             <article class="card reveal" data-category="ml">
@@ -32,10 +41,7 @@
                 <h3>Autonomous Driving (E2E)</h3>
                 <p>Collected camera + sensor data and trained end‑to‑end behavioral cloning models in the Udacity simulator, covering perception through low-level control.</p>
                 <div class="tags"><span>PyTorch</span><span>Udacity</span><span>Simulation</span><span>Autonomy</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                  <a href="#" class="btn small ghost">Demo</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> autonomy pipeline thinking from data collection to control behavior.</p>
               </div>
             </article>
             <article class="card reveal" data-category="ml">
@@ -44,9 +50,7 @@
                 <h3>Generative HPO</h3>
                 <p>Explored diffusion-based generators that propose performant hyperparameters, improving training efficiency for vision backbones.</p>
                 <div class="tags"><span>Diffusion</span><span>PyTorch</span><span>HPO</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Write‑up</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> experimental ML research applied to model selection and optimization.</p>
               </div>
             </article>
           </div>
@@ -59,10 +63,7 @@
                 <h3>CAPTCHA Solver</h3>
                 <p>End‑to‑end pipeline for degraded multi-length CAPTCHAs using ResNet encoders and Transformer decoder heads with heavy data augmentation.</p>
                 <div class="tags"><span>PyTorch</span><span>Transformer</span><span>ResNet</span><span>Hydra</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                  <a href="#" class="btn small ghost">Demo</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> robust data generation, sequence modeling, and degradation-aware training.</p>
               </div>
             </article>
             <article class="card reveal" data-category="cv">
@@ -71,9 +72,7 @@
                 <h3>Pickleball Tracking</h3>
                 <p>OAK-D powered pipeline for ball/player detection, trajectory smoothing, and rally analytics.</p>
                 <div class="tags"><span>Detection</span><span>Tracking</span><span>OpenCV</span><span>OAK-D</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> real-time perception, tracking, and analytics for noisy sports video.</p>
               </div>
             </article>
             <article class="card reveal" data-category="cv">
@@ -82,9 +81,7 @@
                 <h3>Eye‑Gaze Cursor Control</h3>
                 <p>Assistive HCI system mapping gaze vectors to cursor trajectories with fast calibration and smoothing for hands-free access.</p>
                 <div class="tags"><span>HCI</span><span>OpenCV</span><span>Python</span><span>Raspberry Pi</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> user-centered CV deployment on constrained hardware.</p>
               </div>
             </article>
           </div>
@@ -97,10 +94,7 @@
                 <h3>Playing Jenga with Franka</h3>
                 <p>Programmed the FR3 to manipulate a Jenga tower; Gym wrapper and MuJoCo sim pipeline for data collection.</p>
                 <div class="tags"><span>MuJoCo</span><span>Gym</span><span>FR3</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                  <a href="#" class="btn small ghost">Results</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> manipulation, simulation design, robot control, and data collection.</p>
               </div>
             </article>
             <article class="card reveal" data-category="robotics">
@@ -109,9 +103,7 @@
                 <h3>Pick‑and‑Place Simulation</h3>
                 <p>Robot simulation for pick‑and‑place using PyBullet and OpenAI Gym; designed reward shaping and task curriculum.</p>
                 <div class="tags"><span>PyBullet</span><span>Gym</span><span>RL</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> robotics environments, task design, and reinforcement learning foundations.</p>
               </div>
             </article>
             <article class="card reveal" data-category="robotics">
@@ -120,51 +112,38 @@
                 <h3>Stop Sign + CO2 (ROS/IoT)</h3>
                 <p>Stop-sign detector fused with CO<sub>2</sub> telemetry on Raspberry Pi + Arduino hardware, streaming alerts over ROS.</p>
                 <div class="tags"><span>ROS</span><span>IoT</span><span>CV</span><span>Arduino</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> sensor integration across CV, ROS, and embedded hardware.</p>
               </div>
             </article>
           </div>
 
-          <h3>Large Language Models</h3>
+          <h3>LLM & Multimodal AI</h3>
           <div class="grid three cards">
-            <article class="card reveal" data-category="llm">
+            <article class="card reveal" data-category="foundation">
               <img src="assets/img/project-perception.svg" alt="UTN FAQ Chatbot" class="card-media" />
               <div class="card-body">
                 <h3>UTN FAQ Chatbot</h3>
                 <p>Fine-tuned a Huggingface LLM with LoRA/PEFT to answer student FAQs, benchmarked accuracy, and wrapped findings into a deployment guide.</p>
                 <div class="tags"><span>LoRA</span><span>PEFT</span><span>Transformers</span><span>Huggingface</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                  <a href="#" class="btn small ghost">Report</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> practical LLM adaptation, evaluation, and documentation for users.</p>
               </div>
             </article>
-          </div>
-
-          <h3>Multimodal Foundation Models</h3>
-          <div class="grid three cards">
-            <article class="card reveal" data-category="multimodal">
+            <article class="card reveal" data-category="foundation">
               <img src="assets/img/project-perception.svg" alt="Optimized Tarsier" class="card-media" />
               <div class="card-body">
                 <h3>Optimized Tarsier</h3>
                 <p>Applied INT8/INT4 post-training quantization to Tarsier2 using BitsAndBytes, slashing inference latency and memory use.</p>
                 <div class="tags"><span>Quantization</span><span>BitsAndBytes</span><span>Transformers</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> model compression and deployment-aware multimodal inference.</p>
               </div>
             </article>
-            <article class="card reveal" data-category="multimodal">
+            <article class="card reveal" data-category="foundation">
               <img src="assets/img/project-perception.svg" alt="Dash Grid Agent" class="card-media" />
               <div class="card-body">
                 <h3>Dash Grid Agent</h3>
                 <p>LLM agent that composes BabyAI instructions using Qwen2.5-7B + gpt-4o-mini prompting to solve grid-world tasks.</p>
                 <div class="tags"><span>BabyAI</span><span>Qwen2.5-7B</span><span>gpt-4o-mini</span><span>Agents</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> agentic reasoning, prompt engineering, and task-based evaluation.</p>
               </div>
             </article>
           </div>
@@ -177,9 +156,7 @@
                 <h3>Video Background Remover</h3>
                 <p>Tool using SAM2 to segment subjects and remove backgrounds in videos, exposed via a RunPod API with Celery workers for async jobs.</p>
                 <div class="tags"><span>SAM2</span><span>OpenCV</span><span>RunPod</span><span>Celery</span></div>
-                <div class="card-actions">
-                  <a href="#" class="btn small">Code</a>
-                </div>
+                <p class="project-signal"><strong>Focus:</strong> full-stack ML service design with async inference and hosted compute.</p>
               </div>
             </article>
           </div>
